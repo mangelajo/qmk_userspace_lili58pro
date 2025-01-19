@@ -18,7 +18,7 @@ WPM_ENABLE = yes            # Enable words per minute feature
 SRC +=  ./lib/rgb_state_reader.c \
         ./lib/logo_reader.c \
         ./lib/mode_icon_reader.c \
-		./keymaps/ajo_es/keylogger.c \
-		./keymaps/ajo_es/layer_state_reader.c
+		./keylogger.c \
+		./layer_state_reader.c
 
 
