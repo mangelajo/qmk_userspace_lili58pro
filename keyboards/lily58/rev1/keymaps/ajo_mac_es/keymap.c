@@ -33,25 +33,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* QWERTY
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * |ESC+L |   1  |   2  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  |  ´   |
+ * |ESC+L |   1  |   2  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  |Bkspc |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Tab  |   q  |   w  |   e  |   r  |   t  |                    |   y  |   u  |   i  |   o  |   p  |Bkspc |
+ * | Tab  |   q  |   w  |   e  |   r  |   t  |                    |   y  |   u  |   i  |   o  |   p  |  `   |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |LCTRL |   a  |   s  |   d  |   f  |   g  |-------.    ,-------|   h  |   j  |   k  |   l  |   ñ  |Enter |
+ * |LCTRL |   a  |   s  |   d  |   f  |   g  |-------.    ,-------|   h  |   j  |   k  |   l  |   ñ  |  ´   |
  * |------+------+------+------+------+------|  C&P  |    |       |------+------+------+------+------+------|
  * |LShift|   z  |   x  |   c  |   v  |   b  |-------|    |-------|   n  |   m  |   ;  |   .  |  -   |RShift
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   | LAlt | LGUI |LOWER | /Space  /       \Space \  |RAISE |RAlt RGUI |
+ *                   | LAlt | LGUI |LOWER | /Bkspc  /       \Space \  |RAISE |RAlt RGUI |
  *                   |      |      |      |/       /         \      \ |      |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
 
  [_QWERTY] = LAYOUT(
-  TD(TD_ESC_LOCK),KC_1,   KC_2,    KC_3,    KC_4,    KC_5,                                       KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_QUOT,
-  KC_TAB,         KC_Q,   KC_W,    KC_E,    KC_R,    KC_T,                                       KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
-  KC_LCTL,        KC_A,   KC_S,    KC_D,    KC_F,    KC_G,                                       KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_ENT,
+  TD(TD_ESC_LOCK),KC_1,   KC_2,    KC_3,    KC_4,    KC_5,                                       KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC,
+  KC_TAB,         KC_Q,   KC_W,    KC_E,    KC_R,    KC_T,                                       KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    ES_GRV,
+  KC_LCTL,        KC_A,   KC_S,    KC_D,    KC_F,    KC_G,                                       KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
   KC_LSFT,        KC_Z,   KC_X,    KC_C,    KC_V,    KC_B, TD(TD_COPY_PASTE),          _______,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
-                          KC_LALT, KC_LGUI, MO(_LOWER), KC_SPC,                    KC_SPC, MO(_RAISE), KC_LALT, KC_RGUI
+                          KC_LALT, KC_LGUI, MO(_LOWER), KC_BSPC,                    KC_SPC, MO(_RAISE), KC_LALT, KC_RGUI
 ),
 /* LOWER
  * ,-----------------------------------------.                    ,-----------------------------------------.
@@ -63,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|  C&P  |    |       |------+------+------+------+------+------|
  * |      |   ª  |      |      |      |      |-------|    |-------|  <   |  >   |      |  ^   |  `   |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   | LAlt | LGUI |LOWER | /Space  /       \Enter \  |RAISE | RAlt | RGUI |
+ *                   | LAlt | LGUI |LOWER | /Bkspc  /       \Enter \  |RAISE | RAlt | RGUI |
  *                   |      |      |      |/       /         \      \ |      |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
@@ -86,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|  C&P  |    |       |------+------+------+------+------+------|
  * |      |      |      |      | Mute |      |-------|    |-------|      |      |      |      |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   | LAlt | LGUI |LOWER | /Space  /       \Space \  |RAISE |BackSP| RGUI |
+ *                   | LAlt | LGUI |LOWER | /Bkspc  /       \Space \  |RAISE |BackSP| RGUI |
  *                   |      |      |      |/       /         \      \ |      |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
@@ -108,7 +108,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
  * |      |      |      |      |      |      |-------|    |-------|      |      | MODE | HUE- | SAT- | VAL- |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   | LAlt | LGUI |LOWER | /Space  /       \Space \  |RAISE |BackSP| RGUI |
+ *                   | LAlt | LGUI |LOWER | /Bkspc  /       \Space \  |RAISE |BackSP| RGUI |
  *                   |      |      |      |/       /         \      \ |      |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
