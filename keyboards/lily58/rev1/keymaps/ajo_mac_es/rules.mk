@@ -13,6 +13,8 @@ OLED_ENABLE = yes           # OLED display
 VIA_ENABLE = no			    # Disabler VIA support
 TAP_DANCE_ENABLE = yes	    # Enable tap dance (multi-tap feature)
 WPM_ENABLE = yes            # Enable words per minute feature
+MOUSEKEY_ENABLE = yes		# Enable mouse emulation
+OS_DETECTION_ENABLE = yes   # Enable OS detection for different keymaps
 
 # If you want to change the display of OLED, you need to change here
 SRC +=  ./lib/rgb_state_reader.c \
